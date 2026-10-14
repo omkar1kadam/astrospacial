@@ -16,8 +16,12 @@ const app = express();
 const port = Number(process.env.PORT) || 4000;
 const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://localhost:5173";
 
-app.disable("x-powered-by");
-app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+    crossOriginResourcePolicy: { policy: "cross-origin" }
+  })
+);
 app.use(
   cors({
     origin: (origin, callback) => {

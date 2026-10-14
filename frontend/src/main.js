@@ -667,4 +667,4 @@ Router.goHome();
 Auth.restoreSession();
 
 // Keep the legacy inline HTML event handlers working after moving the script to a module.
-Object.assign(window, { Auth, CmdK, Router, Sidebar });
+Object.assign(window, { Auth, CmdK, Router, Sidebar, Modal, Settings, Toast, Watchlist, Nav, Menus });

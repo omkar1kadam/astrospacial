@@ -6,5 +6,5 @@ backend/.env
 .DS_Store
 .vscode/*
 !.vscode/extensions.json
-backend/data/*.db
-*.db
+backend/data/*.db*
+*.db*

@@ -13,6 +13,7 @@ if (!process.env.JWT_SECRET || process.env.JWT_SECRET.length < 32) {
 }
 
 const app = express();
+app.set("trust proxy", 1);
 const port = Number(process.env.PORT) || 4000;
 const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://localhost:5173";
 
